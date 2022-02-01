@@ -20,7 +20,9 @@ def JudgeResolusion(list,solution):
         img.close();
         if w<targetWidth and h<targetHeigh:
             scale=max(math.ceil(targetHeigh/h),math.ceil(targetWidth/w))
-            if scale >2 and scale <=4:
+            if scale ==2:
+                scale=2
+            elif scale >2 and scale <=4:
                 scale =4
             elif scale>4 and scale<=8:
                 scale=8
