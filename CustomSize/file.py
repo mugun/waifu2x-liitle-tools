@@ -13,7 +13,10 @@ def JudgeResolusion(list,solution):
     targetHeigh = int(solution.split("*")[1])
     tuple={}
     for i in list :
-        img = Image.open(i)
+        try :
+            img = Image.open(i)
+        except :
+            continue
         # imgSize = img.size  # 大小/尺寸
         w = img.width  # 图片的宽
         h = img.height  # 图片的高
